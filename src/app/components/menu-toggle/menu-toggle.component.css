@@ -1,0 +1,6 @@
+.rotate {
+  transition: transform 0.9s ease-in-out;
+}
+.rotate.active {
+  transform: rotate(3600deg);
+}
