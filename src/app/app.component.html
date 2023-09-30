@@ -29,7 +29,6 @@
   </header><!-- End Header -->
 
   <main id="main">
-
     <app-hero></app-hero>
     <app-about></app-about>
     <app-facts></app-facts>
@@ -39,8 +38,9 @@
     <app-services></app-services>
     <app-testimonials></app-testimonials>
     <app-contact></app-contact>
+    <a (click)="scrollToSection('home')" class="back-to-top d-flex align-items-center justify-content-center" [class.active]="activeSection !== 'home'"><i class="bi bi-arrow-up-short"></i></a>
 
   </main><!-- End #main -->
   <app-footer></app-footer>
-  <a (click)="scrollToSection('home')"  class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
 

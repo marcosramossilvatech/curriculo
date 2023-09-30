@@ -14,6 +14,7 @@ import { TestimonialsComponent } from './components/testimonials/testimonials.co
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.component';
+import { VoltarInicioComponent } from './components/voltar-inicio/voltar-inicio.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.compon
     TestimonialsComponent,
     ContactComponent,
     FooterComponent,
-    MenuToggleComponent
+    MenuToggleComponent,
+    VoltarInicioComponent,
   ],
   imports: [
     BrowserModule
