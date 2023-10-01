@@ -1,38 +1,29 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { AboutComponent } from '../about/about.component';
+import { FactsComponent } from '../facts/facts.component';
+import { SkillsComponent } from '../skills/skills.component';
+import { ResumeComponent } from '../resume/resume.component';
+import { PortfolioComponent } from '../portfolio/portfolio.component';
+import { ServicesComponent } from '../services/services.component';
+import { TestimonialsComponent } from '../testimonials/testimonials.component';
+import { ContactComponent } from '../contact/contact.component';
 
 @Component({
   selector: 'app-menu-lateral',
   templateUrl: './menu-lateral.component.html',
   styleUrls: ['./menu-lateral.component.css']
 })
-export class MenuLateralComponent implements OnInit {
-
-  activeSection: string = 'hero';
-  @ViewChild(HeroComponent) heroComponent?: HeroComponent;
-  @ViewChild(AboutComponent) aboutComponent?: AboutComponent;
+export class MenuLateralComponent {
+  activeSection: string = 'home';
   constructor(private el: ElementRef) {}
 
-  ngOnInit() {}
-
-  scrollToSection(sectionName: string): void {
-    let sectionComponent: any;
-
-    // Determine qual componente de seção corresponde ao nome da seção
-    switch (sectionName) {
-      case 'hero':
-        sectionComponent = this.heroComponent;
-        break;
-      case 'about':
-          sectionComponent = this.aboutComponent;
-          break;
-      // Adicione cases para as outras seções aqui
-    }
-
-    if (sectionComponent) {
-      sectionComponent.scrollToSection();
-      this.activeSection = sectionName;
+  scrollToSection(sectionId: string): void {
+    const section = this.el.nativeElement.querySelector(`#${sectionId}`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      this.activeSection = sectionId;
     }
   }
+
 }

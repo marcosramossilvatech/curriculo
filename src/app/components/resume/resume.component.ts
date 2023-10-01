@@ -1,4 +1,5 @@
 import { Component, ElementRef } from '@angular/core';
+import { ScrollService } from 'src/app/shared/scroll.service';
 
 @Component({
   selector: 'app-resume',
@@ -6,12 +7,9 @@ import { Component, ElementRef } from '@angular/core';
   styleUrls: ['./resume.component.css']
 })
 export class ResumeComponent {
-  constructor(private el: ElementRef) {}
+  constructor(private el: ElementRef, private scrollService: ScrollService) {}
 
   scrollToSection(sectionId: string): void {
-    const section = this.el.nativeElement.querySelector(`#${sectionId}`);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+    this.scrollService.scrollToSection(sectionId)
   }
 }

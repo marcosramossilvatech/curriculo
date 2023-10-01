@@ -15,6 +15,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MenuToggleComponent } from './components/menu-toggle/menu-toggle.component';
 import { VoltarInicioComponent } from './components/voltar-inicio/voltar-inicio.component';
+import { CabecalhoComponent } from './components/cabecalho/cabecalho.component';
+import { RedeSocialComponent } from './shared/components/rede-social/rede-social.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { VoltarInicioComponent } from './components/voltar-inicio/voltar-inicio.
     FooterComponent,
     MenuToggleComponent,
     VoltarInicioComponent,
+    CabecalhoComponent,
+    RedeSocialComponent,
   ],
   imports: [
     BrowserModule

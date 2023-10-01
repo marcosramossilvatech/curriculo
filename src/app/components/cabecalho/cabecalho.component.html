@@ -1,0 +1,14 @@
+<div class="profile">
+  <img src="assets/img/unnamed.jpg" alt="" class="img-fluid rounded-circle"(mouseenter)="rotate = true" (mouseleave)="rotate = false"
+  [ngClass]="{'rotate': rotate}">
+  <h1 class="text-light"><a href="index.html">Marcos Ramos</a></h1>
+  <div class="social-links mt-3 text-center">
+    <!-- <app-rede-social *ngFor="let link of redesSociais" [href]="link.href"  class = "whatsapp" [class]="link.class_a" [class]="link.class_i"></app-rede-social> -->
+    <a href="https://api.whatsapp.com/send?phone=+553187752313" class="whatsapp" target="_blank"(mouseenter)="rotate = true" (mouseleave)="rotate = false"
+    [ngClass]="{'rotate': rotate}"><i class="bx bxl-whatsapp"></i></a>
+    <a href="https://github.com/marcosramossilvatech" class="github" target="_blank"(mouseenter)="rotate = true" (mouseleave)="rotate = false"
+    [ngClass]="{'rotate': rotate}"><i class="bx bxl-github"></i></a>
+    <a href="https://www.linkedin.com/in/marcos-ramos-1ab3856a/" class="linkedin" [ngClass]="{'rotate': true}" target="_blank" (mouseenter)="rotate = true" (mouseleave)="rotate = false"
+    [ngClass]="{'rotate': rotate}"><i class="bx bxl-linkedin"></i></a>
+  </div>
+</div>
